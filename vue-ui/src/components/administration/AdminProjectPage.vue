@@ -43,6 +43,7 @@
             <el-checkbox label="principleFairness">Fairness</el-checkbox>
             <el-checkbox label="principleEA">Ethics & Accountability</el-checkbox>
             <el-checkbox label="principleTransparency">Transparency</el-checkbox>
+            <el-checkbox label="principleRobustness">Robustness</el-checkbox>
           </el-checkbox-group>
         </div>
       </div>
@@ -218,6 +219,9 @@
         if (this.principleList.indexOf('principleTransparency') != -1) {
           this.saveProjInfo.principleTransparency = true
         } else {this.saveProjInfo.principleTransparency = false}
+        if (this.principleList.indexOf('principleRobustness') != -1) {
+          this.saveProjInfo.principleRobustness = true
+        } else {this.saveProjInfo.principleRobustness = false}
         this.$http.post(`/api/admin/project/${this.projectId}`,this.saveProjInfo).then(res => {
           if (res.status == 200) {
             this.$message.success('Save successfully')
@@ -316,6 +320,7 @@
           if (res.data.principleFairness) {this.principleList.push('principleFairness')}
           if (res.data.principleEA) {this.principleList.push('principleEA')}
           if (res.data.principleTransparency) {this.principleList.push('principleTransparency')}
+          if (res.data.principleRobustness) {this.principleList.push('principleRobustness')}
         })
       },
       dateFormat(date) {

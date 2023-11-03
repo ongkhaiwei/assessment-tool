@@ -49,6 +49,7 @@ create table vat2_project (
     principle_f boolean not null default false,
     principle_ea boolean not null default false,
     principle_t boolean not null default false,
+    principle_r boolean not null default false,
     current_model_artifact_vid integer,
     current_questionnaire_vid integer,
 

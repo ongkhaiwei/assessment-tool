@@ -64,6 +64,7 @@ class QuestionnaireServiceImplTest {
         project.setPrincipleFairness(true);
         project.setPrincipleEA(true);
         project.setPrincipleTransparency(true);
+        project.setPrincipleRobustness(true);
 
         QuestionnaireVersion questionnaire = questionnaireService.createByTemplate(userId, project, now, templateQuestionnaire);
         questionnaireService.saveNewQuestionnaire(questionnaire);

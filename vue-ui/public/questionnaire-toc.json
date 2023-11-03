@@ -10,7 +10,8 @@
         "G": "Generic",
         "F": "Fairness",
         "EA": "Ethics & Accountability",
-        "T": "Transparency"
+        "T": "Transparency",
+        "R": "Robustness"
     },
     "principleAssessments": {
         "G": {
@@ -154,6 +155,48 @@
                 {
                     "serial": 1,
                     "step": "Define System Context & Design",
+                    "mainQuestionList": [
+                        {
+                            "id": 8,
+                            "vid": 81,
+                            "serial": "G8",
+                            "question": "Main question, without sub-questions or answers."
+                        },
+                        {
+                            "id": 8,
+                            "vid": 82,
+                            "serial": "G9",
+                            "question": "Main question, without sub-questions or answers."
+                        }
+                    ]
+
+                }
+
+            ]
+        },
+        "R": {
+            "stepList": [
+                {
+                    "serial": 0,
+                    "step": "Principles to Practice",
+                    "mainQuestionList": [
+                        {
+                            "id": 1,
+                            "vid": 21,
+                            "serial": "G1",
+                            "question": "Main question, without sub-questions or answers."
+                        },
+                        {
+                            "id": 2,
+                            "vid": 22,
+                            "serial": "G2",
+                            "question": "Main question, without sub-questions or answers."
+                        }
+                    ]
+                },
+                {
+                    "serial": 1,
+                    "step": "R Define System Context & Design",
                     "mainQuestionList": [
                         {
                             "id": 8,

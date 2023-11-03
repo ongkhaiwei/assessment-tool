@@ -68,6 +68,9 @@ public class ProjectCreateDto implements BasicDtoInterface<Project> {
     @Schema(description = "Assess transparency principle.", required = true)
     private Boolean principleTransparency;
 
+    @Schema(description = "Assess Robustness principle.", required = true)
+    private Boolean principleRobustness;
+
     public Project toEntity(Integer creator) {
         if (StringUtils.isEmpty(name)) {
             throw new ErrorParamException("'name' cannot be empty.");
@@ -94,6 +97,7 @@ public class ProjectCreateDto implements BasicDtoInterface<Project> {
         project.setPrincipleFairness(this.principleFairness);
         project.setPrincipleEA(this.principleEA);
         project.setPrincipleTransparency(this.principleTransparency);
+        project.setPrincipleRobustness(this.principleRobustness);
         project.setArchived(false);
         Date now = new Date();
         project.setCreatedTime(now);

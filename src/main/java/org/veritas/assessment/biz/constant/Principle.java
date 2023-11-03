@@ -9,6 +9,7 @@ public enum Principle {
     F("F", "Fairness"),
     EA("EA", "Ethics & Accountability"),
     T("T", "Transparency"),
+    R("R", "Robustness"),
     ;
 
     @EnumValue

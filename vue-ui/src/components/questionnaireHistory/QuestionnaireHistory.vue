@@ -104,7 +104,8 @@ export default {
         "Generic" : "G",
         "Fairness" : "F",
         "Ethics & Accountability" : "EA",
-        "Transparency" : "T"
+        "Transparency" : "T",
+        "Robustness" : "R"
       },
       draftList: [],
       compareFlag: false,

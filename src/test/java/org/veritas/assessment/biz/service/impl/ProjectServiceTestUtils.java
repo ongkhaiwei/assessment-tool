@@ -53,6 +53,7 @@ public class ProjectServiceTestUtils {
         project.setPrincipleFairness(true);
         project.setPrincipleEA(true);
         project.setPrincipleTransparency(true);
+        project.setPrincipleRobustness(true);
 
         List<TemplateQuestionnaire> templateQuestionnaireList =
                 templateQuestionnaireService.findByKeywordAndBiz(null, businessScenarioEnum.getCode());

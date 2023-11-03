@@ -50,6 +50,7 @@ public class ProjectControllerTestUtils {
         createDto.setPrincipleFairness(true);
         createDto.setPrincipleEA(true);
         createDto.setPrincipleTransparency(true);
+        createDto.setPrincipleRobustness(true);
 
         MvcResult mvcResult = mockMvc.perform(post("/api/project/new")
                         .with(user("1").roles("ADMIN", "USER"))

@@ -63,6 +63,9 @@ public class Project {
     @TableField(value = "principle_t")
     private boolean principleTransparency;
 
+    @TableField(value = "principle_r")
+    private boolean principleRobustness;
+
     private Integer currentModelArtifactVid;
 
     private Long currentQuestionnaireVid;
@@ -153,6 +156,9 @@ public class Project {
         }
         if (this.principleTransparency) {
             list.add(Principle.T);
+        }
+        if (this.principleRobustness) {
+            list.add(Principle.R);
         }
         return Collections.unmodifiableList(list);
     }

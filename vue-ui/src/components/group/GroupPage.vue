@@ -223,6 +223,7 @@
           principleFairness: false,
           principleEA: false,
           principleTransparency: false,
+          principleRobustness: false,
           questionnaireTemplateId: '',
         },
         existingProjectForm: {
@@ -231,6 +232,7 @@
           principleFairness: false,
           principleEA: false,
           principleTransparency: false,
+          principleRobustness: false,
           questionnaireTemplateId: '',
           name: '',
           description: '',
@@ -290,6 +292,7 @@
             this.existingProjectForm.principleFairness = projectInfo.principleFairness
             this.existingProjectForm.principleEA = projectInfo.principleEA
             this.existingProjectForm.principleTransparency = projectInfo.principleTransparency
+            this.existingProjectForm.principleRobustness = projectInfo.principleRobustness
             this.existingProjectForm.name = projectInfo.name
             this.existingProjectForm.description = projectInfo.description
             this.$http.get('/api/system/questionnaire_template',{params:{'businessScenario':projectInfo.businessScenario}}).then(res => {

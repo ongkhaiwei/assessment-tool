@@ -157,6 +157,7 @@ class ProjectControllerTest {
         createDto.setPrincipleFairness(true);
         createDto.setPrincipleEA(true);
         createDto.setPrincipleTransparency(true);
+        createDto.setPrincipleRobustness(true);
 
         MvcResult mvcResult = mockMvc.perform(post("/api/project/new")
                         .with(user("1").roles("ADMIN", "USER"))
@@ -180,6 +181,7 @@ class ProjectControllerTest {
         basicDto.setPrincipleFairness(true);
         basicDto.setPrincipleEA(true);
         basicDto.setPrincipleTransparency(true);
+        basicDto.setPrincipleRobustness(true);
 
         mvcResult = mockMvc.perform(post("/api/project/{projectId}", projectDto.getId())
                         .with(user("1").roles("ADMIN", "USER"))
@@ -288,6 +290,7 @@ class ProjectControllerTest {
         createDto.setPrincipleFairness(true);
         createDto.setPrincipleEA(true);
         createDto.setPrincipleTransparency(true);
+        createDto.setPrincipleRobustness(true);
 
         MvcResult mvcResult = mockMvc.perform(post("/api/project/new")
                         .with(user("1").roles("ADMIN", "USER"))

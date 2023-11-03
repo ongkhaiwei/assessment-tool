@@ -46,6 +46,8 @@ public class ProjectDto {
 
     private Boolean principleTransparency;
 
+    private Boolean principleRobustness;
+
     private Integer currentModelArtifactVid;
 
     private Integer currentQuestionnaireVid;

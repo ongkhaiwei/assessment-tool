@@ -13,6 +13,7 @@
             <el-radio-button v-show="this.principleList.indexOf('F') != -1" label="Fairness"></el-radio-button>
             <el-radio-button v-show="this.principleList.indexOf('EA') != -1" label="Ethics & Accountability"></el-radio-button>
             <el-radio-button v-show="this.principleList.indexOf('T') != -1" label="Transparency"></el-radio-button>
+            <el-radio-button v-show="this.principleList.indexOf('R') != -1" label="Robustness"></el-radio-button>
           </el-radio-group>
         </div>
         <div class="BarlowMedium">
@@ -68,7 +69,8 @@ export default {
         "Generic" : "G",
         "Fairness" : "F",
         "Ethics & Accountability" : "EA",
-        "Transparency" : "T"
+        "Transparency" : "T",
+        "Robustness" : "R"
       },
       principleList: [],
       menuData: [],

@@ -123,6 +123,7 @@ public interface ProjectMapper extends BaseMapper<Project> {
         wrapper.set(Project::isPrincipleFairness, project.isPrincipleFairness());
         wrapper.set(Project::isPrincipleEA, project.isPrincipleEA());
         wrapper.set(Project::isPrincipleTransparency, project.isPrincipleTransparency());
+        wrapper.set(Project::isPrincipleRobustness, project.isPrincipleRobustness());
 
         wrapper.set(Project::getLastEditedTime, TimestampHandler.toDbString(project.getLastEditedTime()));
         return update(null, wrapper);

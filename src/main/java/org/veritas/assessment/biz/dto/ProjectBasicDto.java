@@ -47,6 +47,8 @@ public class ProjectBasicDto implements BasicDtoInterface<Project> {
     @NotNull
     private Boolean principleTransparency;
 
+    @NotNull
+    private Boolean principleRobustness;
 
     public Project toEntity(Integer creator) {
         Project project = new Project();
@@ -58,6 +60,7 @@ public class ProjectBasicDto implements BasicDtoInterface<Project> {
         project.setPrincipleFairness(this.principleFairness);
         project.setPrincipleEA(this.principleEA);
         project.setPrincipleTransparency(this.principleTransparency);
+        project.setPrincipleRobustness(this.principleRobustness);
         return project;
     }
 }

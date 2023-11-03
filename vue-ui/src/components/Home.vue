@@ -91,7 +91,7 @@
       <div v-show="activeStep==0">
         <img class="tour" src="../assets/wizardPic/tour1.png" alt="">
         <div class="tour-title">Create your project</div>
-        <div class="tour-text">Create a project to assess fairness, ethics, accountability and transparency principles.</div>
+        <div class="tour-text">Create a project to assess fairness, ethics, accountability, transparency and robustness principles.</div>
       </div>
       <div v-show="activeStep==1">
         <img class="tour" src="../assets/wizardPic/tour2.png" alt="">

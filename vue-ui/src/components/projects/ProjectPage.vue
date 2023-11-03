@@ -190,6 +190,11 @@
           <el-checkbox :disabled="archived" style="margin-left: 8px" v-model="editProjectForm.principleTransparency">
             Transparency
           </el-checkbox>
+          
+          <el-checkbox :disabled="archived" style="margin-left: 8px" v-model="editProjectForm.principleRobustness">
+            Robustness
+          </el-checkbox>
+          
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer" style="display: flex;justify-content: space-between">
@@ -227,7 +232,8 @@ export default {
         "G": "Generic",
         "F": "Fairness",
         "EA": "Ethics & Accountability",
-        "T": "Transparency"
+        "T": "Transparency",
+        "R": "Robustness"
       },
       projectId: this.$route.query.id,
       businessScenarioList: [],
@@ -245,7 +251,8 @@ export default {
         principleGeneric: true,
         principleFairness: false,
         principleEA: false,
-        principleTransparency: false
+        principleTransparency: false,
+        principleRobustness: false
       },
       editProjectFormRules: {
         name: [{required: true, trigger: 'blur'},],
@@ -300,6 +307,7 @@ export default {
         principleFairness: false,
         principleEA: false,
         principleTransparency: false,
+        principleRobustness: false
       }
 
 
@@ -496,9 +504,11 @@ export default {
           this.editProjectForm.principleFairness = res.data.principleFairness
           this.editProjectForm.principleEA = res.data.principleEA
           this.editProjectForm.principleTransparency = res.data.principleTransparency
+          this.editProjectForm.principleRobustness= res.data.principleRobustness
           this.projectPrinciple.principleFairness = res.data.principleFairness
           this.projectPrinciple.principleEA = res.data.principleEA
           this.projectPrinciple.principleTransparency = res.data.principleTransparency
+          this.projectPrinciple.principleRobustness = res.data.principleRobustness
           this.projectPrinciple.principleGeneric = res.data.principleGeneric
           if (res.data.userOwnerId) {
             this.userOwnerId = res.data.userOwnerId
@@ -583,6 +593,7 @@ export default {
         let g = this.projectPrinciple.principleGeneric;
         let f = this.projectPrinciple.principleFairness;
         let t = this.projectPrinciple.principleTransparency;
+        //let r = this.projectPrinciple.principleRobustness;
         reader.onload = async (res) => {
           const jsonContent = res.target.result;
           let jsonModel = null;

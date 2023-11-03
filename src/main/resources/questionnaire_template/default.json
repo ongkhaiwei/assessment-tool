@@ -357,6 +357,14 @@
                 "question": "Does the AIDA system implementation support the agreed internal and external explanations even after go-live (i.e., not just as a one-off before approval but throughout the lifetime of the AIDA system)?"
 
             }
+        ],
+        "R": [
+            {
+                "serial": "R1",
+                "step": 0,
+                "question": "Have to test about Robustness?"
+
+            }
         ]
     }
 }

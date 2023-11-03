@@ -39,6 +39,7 @@
             <el-checkbox style="margin-left: 8px" v-model="projectForm.principleEA">Ethics & Accountability
             </el-checkbox>
             <el-checkbox style="margin-left: 8px" v-model="projectForm.principleTransparency">Transparency</el-checkbox>
+            <el-checkbox style="margin-left: 8px" v-model="projectForm.principleRobustness">Robustness</el-checkbox>
           </el-form-item>
           <el-form-item style="margin-top: -6px" class="BarlowMedium" label="Owner" prop="ownerType">
             <el-select clearable v-model="projectForm.ownerType" placeholder="Please choose a owner">
@@ -86,6 +87,10 @@
             </el-checkbox>
             <el-checkbox style="margin-left: 8px" v-model="existingProjectForm.principleTransparency">Transparency
             </el-checkbox>
+            
+            <el-checkbox style="margin-left: 8px" v-model="existingProjectForm.principleRobustness">Robustness
+            </el-checkbox>
+            
           </el-form-item>
           <el-form-item class="BarlowMedium" label="Project name" prop="name">
             <el-input placeholder="Please input a project name" v-model="existingProjectForm.name"></el-input>
@@ -157,6 +162,7 @@ export default {
         principleFairness: false,
         principleEA: false,
         principleTransparency: false,
+        principleRobustness: false,
       },
       projectForm: {
         name: '',
@@ -166,6 +172,7 @@ export default {
         principleFairness: false,
         principleEA: false,
         principleTransparency: false,
+        principleRobustness: false,
         ownerType: '',
         questionnaireTemplateId: null,
       },
@@ -176,6 +183,7 @@ export default {
         principleFairness: false,
         principleEA: false,
         principleTransparency: false,
+        principleRobustness: false,
         questionnaireTemplateId: null,
         name: '',
         description: '',
@@ -314,6 +322,7 @@ export default {
           this.existingProjectForm.principleFairness = projectInfo.principleFairness
           this.existingProjectForm.principleEA = projectInfo.principleEA
           this.existingProjectForm.principleTransparency = projectInfo.principleTransparency
+          this.existingProjectForm.principleRobustness = projectInfo.principleRobustness
           this.existingProjectForm.name = projectInfo.name
           this.existingProjectForm.description = projectInfo.description
         }
